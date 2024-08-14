@@ -1,0 +1,384 @@
+body {
+    background: linear-gradient(180deg, #3f323f, #313131);
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del header */
+header {
+    background: linear-gradient(180deg, #172033e7, #00294400);
+    /*background-color: rgba(36, 77, 124, 0.301); /* Fondo sólido con opacidad */
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: padding 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding no cause problemas */
+}
+
+/* Estilo reducido del header */
+header.shrink {
+    padding: 21px; /* 30% más pequeño */
+}
+
+header.shrink .logo h1 {
+    font-size: 25px; /* Ajustar el tamaño del texto en el logo */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo h1 {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Asegura que el contenido del menú no se recorte */
+}
+
+nav .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    flex-wrap: wrap; /* Asegura que los elementos del menú se alineen correctamente */
+}
+
+nav .nav-links li {
+    margin-left: 30px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Ajusta el tamaño del texto para mayor legibilidad */
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    transform: scale(1.2);
+    color: #FFD700;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+.indsec1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Esto asegura que la imagen cubra el área sin distorsionarse */
+}
+
+
+.footer {
+    background-color: #313131;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer .fparrafo {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.footer a.redes {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer .iconosredes {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.footer .iconosredes:hover {
+    transform: scale(1.2);
+}
+
+.indsec1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Asegura que la sección ocupe toda la altura de la pantalla */
+    overflow: hidden;
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier padding */
+}
+
+.indsec1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    display: block;
+}
+
+
+.indsec3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images img {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+button.prev, button.next { 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact-form-section {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.form-container {
+    background-color: #4f4f4f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-container h2 {
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3f3f3f;
+    color: #fff;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    background-color: #575757;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4f4f4f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #f0f0f0;
+}
+
+/* Confirmation message style */
+#confirmation-message {
+    background-color: #4f4f4f;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+#confirmation-message button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4f4f4f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#confirmation-message button:hover {
+    background-color: #f0f0f0;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Espaciado entre secciones */
+    padding: 40px 20px;
+}
+
+.portfolio-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px; /* Limita el ancho máximo para centrar */
+    width: 100%;
+}
+
+.portfolio-item img {
+    width: 100%;
+    max-width: 500px; /* Ancho máximo de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+
+.portfolio-text {
+    color: #ccc;
+    max-width: 500px; /* Ancho máximo del texto */
+}
+
+p .portfolio-text {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+/* Alternar la posición de la imagen y el texto en versión escritorio */
+.portfolio-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Ajusta el margen superior del contenido para no superponerse con el header */
+main {
+    margin-top: 90px; /* Ajusta según el tamaño completo del header */
+    background: linear-gradient(180deg, #3f323f, #313131);
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #838383a2;
+        border-radius: 13px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .portfolio-item {
+        display: flex;
+        flex-direction: column !important; /* Forzar que se ordenen en columna */
+        text-align: center;
+    }
+
+    /* Orden de los elementos en móvil: Imagen -> Título -> Texto */
+    .portfolio-item img {
+        order: 1 !important; /* Asegura que la imagen aparezca siempre primero */
+        max-width: 100%; /* La imagen ocupará el ancho completo en móviles */
+    }
+
+    .portfolio-text {
+        order: 2 !important;
+        margin-top: 20px;
+    }
+}
